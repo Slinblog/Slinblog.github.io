@@ -5,17 +5,17 @@
   
   <title>第二章、进程的描述与控制 | 萌贱萌贱而亡</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第二章:程序的进程与控制     2.1  前驱图和程序执行     2.1.1 前驱图概念：所谓前驱图(Precedence Graph),是指一个有向无循环图,可记为DAG(Directed Acyclic Graph),它用于描述进程之间的先后顺序。2.1.2程序顺序执行概念：通常,一个应用程序由若干个程序段组成,每一个程序段完成特定的功能,它们在执行时,都需要按照某种先后顺序执行">
+  <meta name="description" content="第二章:程序的进程与控制  概念：所谓前驱图(Precedence Graph),是指一个有向无循环图,可记为DAG(Directed Acyclic Graph),它用于描述进程之间的先后顺序。 2.1.2程序顺序执行概念： 通常,一个应用程序由若干个程序段组成,每一个程序段完成特定的功能,它们在执行时,都需要按照某种先后顺序执行,仅当前一程序段执行后,才运行后一程序段。">
 <meta name="keywords" content="OS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第二章、进程的描述与控制">
 <meta property="og:url" content="http://yoursite.com/2017/05/25/txt/index.html">
 <meta property="og:site_name" content="萌贱萌贱而亡">
-<meta property="og:description" content="第二章:程序的进程与控制     2.1  前驱图和程序执行     2.1.1 前驱图概念：所谓前驱图(Precedence Graph),是指一个有向无循环图,可记为DAG(Directed Acyclic Graph),它用于描述进程之间的先后顺序。2.1.2程序顺序执行概念：通常,一个应用程序由若干个程序段组成,每一个程序段完成特定的功能,它们在执行时,都需要按照某种先后顺序执行">
-<meta property="og:updated_time" content="2017-05-26T15:12:45.137Z">
+<meta property="og:description" content="第二章:程序的进程与控制  概念：所谓前驱图(Precedence Graph),是指一个有向无循环图,可记为DAG(Directed Acyclic Graph),它用于描述进程之间的先后顺序。 2.1.2程序顺序执行概念： 通常,一个应用程序由若干个程序段组成,每一个程序段完成特定的功能,它们在执行时,都需要按照某种先后顺序执行,仅当前一程序段执行后,才运行后一程序段。">
+<meta property="og:updated_time" content="2017-05-26T15:26:29.753Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第二章、进程的描述与控制">
-<meta name="twitter:description" content="第二章:程序的进程与控制     2.1  前驱图和程序执行     2.1.1 前驱图概念：所谓前驱图(Precedence Graph),是指一个有向无循环图,可记为DAG(Directed Acyclic Graph),它用于描述进程之间的先后顺序。2.1.2程序顺序执行概念：通常,一个应用程序由若干个程序段组成,每一个程序段完成特定的功能,它们在执行时,都需要按照某种先后顺序执行">
+<meta name="twitter:description" content="第二章:程序的进程与控制  概念：所谓前驱图(Precedence Graph),是指一个有向无循环图,可记为DAG(Directed Acyclic Graph),它用于描述进程之间的先后顺序。 2.1.2程序顺序执行概念： 通常,一个应用程序由若干个程序段组成,每一个程序段完成特定的功能,它们在执行时,都需要按照某种先后顺序执行,仅当前一程序段执行后,才运行后一程序段。">
   
     <link rel="alternate" href="/atom.xml" title="萌贱萌贱而亡" type="application/atom+xml">
   
@@ -90,7 +90,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <html><br><head><br><br></head><br><body><br>     <p align="left" style="color:blue;font_size:100px;"><strong>第二章:程序的进程与控制</strong></p><br>     <p><strong>2.1  前驱图和程序执行</strong></p><br>     <p><strong>2.1.1 前驱图</strong></p><br></body><br></html><br>概念：<br><br>所谓前驱图(Precedence Graph),是指一个有向无循环图,可记为DAG(Directed Acyclic Graph),它用于描述进程之间的先后顺序。<br><br><strong>2.1.2程序顺序执行</strong><br>概念：<br><br>通常,一个应用程序由若干个程序段组成,每一个程序段完成特定的功能,它们在执行时,都需要按照某种先后顺序执行,仅当前一程序段执行后,才运行后一程序段。<br>概念:<br><br><body><br>      <ul><br>         <li>顺序性</li><br>         <li>封闭性</li><br>         <li>可再现性：<em>无论是走走停停还是从头到尾不停顿执行，都可获得相同结果</em></li><br>      </ul><br></body><br>
+        <body><br>     <p align="left" style="color:blue;font_size:100px;"><strong>第二章:程序的进程与控制</strong><br><br></p></body>
+
+<p>概念：<br>所谓前驱图(Precedence Graph),是指一个有向无循环图,可记为DAG(Directed Acyclic Graph),它用于描述进程之间的先后顺序。</p>
+<p><strong>2.1.2程序顺序执行</strong><br>概念：</p>
+<p>通常,一个应用程序由若干个程序段组成,每一个程序段完成特定的功能,它们在执行时,都需要按照某种先后顺序执行,仅当前一程序段执行后,才运行后一程序段。</p>
+<body><br>      <ul><br>         <p align="left">概念:<br><br>         <li>顺序性</li><br>         <li>封闭性</li><br>         <li>可再现性：<em>无论是走走停停还是从头到尾不停顿执行，都可获得相同结果</em></li><br>      </p></ul><br></body>
+
 
 <p><strong>2.1.3程序并发执行</strong><br>原因：</p>
 <p>虽然程序一个个执行，对于程序员很方便控制,但是系统资源的利用率很低,为了解决这个问题,系统引入多道程序技术,使程序和程序段之间能并发执行。<em>但是只有不存在前驱关系的程序才能并发执行。</em></p>
@@ -98,7 +104,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/25/txt/" data-id="cj35zleun0001i06xjgtj0ipb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/25/txt/" data-id="cj3602zb90001m46xfux71r5l" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OS/">OS</a></li></ul>
